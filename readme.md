@@ -1,0 +1,1 @@
+//service_worker manifest_version 为2 则使用 scripts

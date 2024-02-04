@@ -1,0 +1,167 @@
+.zijing_list {
+  padding: 20px 20px;
+}
+
+.message {
+  height: 40px;
+  margin: 0 10px;
+}
+.list-content {
+  display: flex;
+  /* height: calc(100vh - 100px); */
+}
+.view-box {
+  flex:auto;
+}
+.view-box .task-content {
+  height: calc(100vh - 120px);
+  overflow: scroll;
+}
+.tasks-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.tasks-top .add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: black;
+}
+
+/*添加 图标 */
+.add-sign {
+  width: 100%;
+  font-size: 2em;
+  color: white;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* text */
+.add-text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition-duration: .3s;
+}
+/* 触碰效果 添加按钮 */
+.add-btn:hover {
+  width: 125px;
+  border-radius: 0px;
+  transition-duration: .3s;
+}
+
+.add-btn:hover .add-sign {
+  width: 30%;
+  transition-duration: .3s;
+  /* padding-left: 20px; */
+}
+.add-btn:hover .add-text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  /* padding-right: 20px; */
+}
+/*点击效果 添加按钮*/
+.add-btn:active {
+  transform: translate(2px ,2px);
+}
+
+/* 卡片翻转效果 */
+.view-box .card {
+  perspective: 1000px;
+  padding: 10px;
+}
+
+.card-inner {
+  width: 100%;
+  /* height: 100%; */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  /* height: 100%; */
+  backface-visibility: hidden;
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front {
+  background-color: #6A2C70;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background-color: #F08A5D;
+  transform: rotateY(180deg);
+}
+/*  */
+
+.task {
+  display: flex;
+  padding: 10px;
+}
+
+.task .task-check-box {
+  margin: 0 10px;
+}
+.task-line {
+  margin-left: 40px;
+  border-bottom: 1px solid rgb(192, 186, 186);
+}
+.button-box {
+  display: flex;
+  width: 150px;
+  margin-left: 20px;
+  flex-direction: column;
+  justify-content:space-around;
+}
+
+.button-box button {
+  position: relative;
+  padding: 0.9em 1em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.button-box button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button-box button:active {
+  transform: translateY(-1px);
+}

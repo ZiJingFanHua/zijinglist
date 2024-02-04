@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js" 
+ },
+  "name": "zijing's list",
+  "version": "1.0",
+  "description": "A simple toDoList extension. by zijing",
+  "action": {
+    "default_icon": "icon.jpg",
+    "default_title":"list"
+  },
+  "offline_enabled": true
+}
