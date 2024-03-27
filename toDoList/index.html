@@ -7,7 +7,7 @@
   <title>zijing's list</title>
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./main.css">
-</head>
+</head> 
 
 <body class="zijing_list">
   <div class="message">
@@ -23,13 +23,15 @@
           <div class="calendar">
             <input type="date">
           </div>
-          <button class="add-btn">
+          <button class="add-btn" id="add-task-btn">
             <div class="add-sign">+</div>
             <div class="add-text">新建任务</div>
           </button>
+          <button class="add-cancel-btn" id="add-cancel-btn">取消</button>
+          <button class="add-confirm-btn" id="add-confirm-btn">确认</button>
         </div>
         <div class="task-content card">
-          <div class="card-inner">
+          <div class="card-inner" id="card-inner">
             <div class="tasks card-front">
               <div class="task">
                 <input type="checkbox" class="task-check-box">
@@ -96,7 +98,7 @@
               <div class="task-line"></div>
             </div>
             <div class="add-task card-back">
-              <input type="text">
+              <input type="text" placeholder="请输入任务详情" id="new-task-message">
             </div>
           </div>
         </div>
@@ -131,5 +133,7 @@
     <!-- end ------ 按钮框 -->
   </div>
 </body>
+
+<script src="./index.js"></script>
 
 </html>
